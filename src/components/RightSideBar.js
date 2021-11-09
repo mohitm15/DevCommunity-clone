@@ -2,7 +2,7 @@ import React from 'react'
 
 const RightSideBar = () => {
     return (
-        <div>
+        <div style={{backgroundColor:'lightgreen'}}>
             RightSideBar Component
         </div>
     )
