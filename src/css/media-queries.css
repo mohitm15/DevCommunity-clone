@@ -1,0 +1,33 @@
+@media only screen and (max-width:799px) {
+
+    .header .headerContainer_hamburgerMenu {
+        display: block;
+   }
+    .header .headerContainer_searchBox {
+        display: none;
+   }
+    .header .headerContainer_right i .hidden-search {
+        display: flex;
+   }
+    .header .headerContainer_right button {
+        display: none;
+   }
+    
+    
+}
+
+
+@media only screen and (max-width: 640px) {
+
+    .header .dropdown-menu {
+        position: absolute;
+        right: 0rem;
+        left: 0rem;
+        margin: 0 0.5rem;
+   }
+   
+
+    .header .dropdown-menu ul li{
+        text-align: center;
+   }
+}

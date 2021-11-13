@@ -1,99 +1,192 @@
 .header {
-    max-width: 100%;
-    background-color: var(--header-bg);
-    height: var(--header-height);
-    display: flex;
-    padding: 0rem 4rem;
-    text-align: center;
+  max-width: 100%;
+  background-color: var(--header-bg);
+  height: var(--header-height);
+  display: flex;
+  padding: 0rem 4rem;
+  text-align: center;
 }
 
-
 .header .headerContainer {
-    display: flex;
-    max-width: var(--site-width);
-    align-items: center;
-    width: 100%;
-    margin-left: 15%;
+  display: flex;
+  max-width: var(--site-width);
+  align-items: center;
+  width: 100%;
+  margin-left: 15%;
 }
 
 .header .headerContainer a {
-    color: black;
-    display: flex;
-    align-items: center;
+  color: black;
+  display: flex;
+  align-items: center;
 }
 
 .header .headerContainer_searchBox {
-    max-width: 620px;
-    float: 1 auto;
-    margin: 0 1rem;
+  max-width: 620px;
+  float: 1 auto;
+  margin: 0 1rem;
 }
 
 .header .headerContainer_searchBox form input {
-    outline: 0;
-    background-color: var(--main-0);
-    padding: 0.6rem;
-    border-radius: 6px;
-    font-size: 1rem;
-    border:1px solid var(--main-3);
-    width: 180%;
+  outline: 0;
+  background-color: var(--main-0);
+  padding: 0.6rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 1px solid var(--main-3);
+  width: 180%;
 }
 
 .header .headerContainer_searchBox form input:focus {
-    border:1px solid black;
-    background-color: var(--header-bg);
+  border: 1px solid black;
+  background-color: var(--header-bg);
 }
 
 .header .headerContainer_right {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .header .headerContainer_right button {
-    background-color: var(--main-theme);
-    color: var(--header-bg);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    margin-right: 0.5rem;
-    font-size: 1rem;
-
+  background-color: var(--main-theme);
+  color: var(--header-bg);
+  padding: 0.6rem 0.9rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto;
 }
 
 .header .headerContainer_right button:hover {
-    background-color: var(--main-theme-darker);
-    cursor: pointer;
+  background-color: var(--main-theme-darker);
+  cursor: pointer;
 }
 
-.header .headerContainer_right .hidden-search {
-    display: none;
-}
+
 .header .headerContainer_right i {
-    margin: 0 1rem;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    color: #3d3d3d;
-    border-radius: 50%;
-    cursor: pointer;
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  color: #3d3d3d;
+  border-radius: 50%;
+  cursor: pointer;
 }
 .header .headerContainer_right i:hover {
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05);
-    background-color: rgba(0, 0, 0, 0.05);
-    color: var(--font-color);
-    z-index: 1;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--font-color);
+  z-index: 1;
 }
 .header .headerContainer_right span {
-    height: 2rem;
-    width: 2rem;
-    margin: 0 1rem;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 1rem;
 }
 .header .headerContainer_right span img {
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    cursor: pointer;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  cursor: pointer;
 }
 .header .headerContainer_right span img:hover {
-    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
 }
+
+.header .dropdown-menu {
+  position: absolute;
+  top: var(--header-height);
+  right: 4rem;
+  left: auto;
+  
+
+  background: var(--header-bg);
+  border: 1px solid var(--main-4);
+  border-radius: 5px;
+  z-index: 4;
+  min-width: 250px;
+}
+
+.header .dropdown-menu-close {
+  display: none;
+}
+.header .dropdown-menu ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.header .dropdown-menu ul li {
+  cursor: pointer;
+  padding: 0.5rem;
+  color: #242424;
+  list-style: none;
+  line-height: 1.6;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.header .dropdown-menu ul li a {
+  cursor: pointer;
+  color: #242424;
+  list-style: none;
+  line-height: 1.6;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.header .dropdown-menu ul li small {
+  color: var(--main-5);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.header .dropdown-menu ul li:first-child {
+  border-bottom: 1px solid var(--main-2);
+  padding: 0.7rem;
+}
+
+.header .dropdown-menu ul li:last-child {
+  border-top: 1px solid var(--main-2);
+  padding: 1rem 0.4rem;
+}
+.header .dropdown-menu ul li:hover {
+  background-color: var(--main-a);
+}
+.header .dropdown-menu ul li a:hover {
+  color: var(--main-a-dropdown);
+}
+
+
+/* hamburger menu */
+.header .headerContainer_hamburgerMenu {
+    display: none;
+    background-color: var(--font-color);
+    height: 2px;
+    width: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.header .headerContainer_hamburgerMenu::before, .header .headerContainer_hamburgerMenu::after {
+    content: "";
+    background-color: var(--font-color);
+    height: 2px;
+    width: 1.2rem;
+    cursor: pointer;
+    display: block;
+}
+.header .headerContainer_hamburgerMenu::before {
+    transform: translateY(-7px);
+}
+.header .headerContainer_hamburgerMenu::after {
+    transform: translateY(5px);
+}
+
+/* hide search icon */
+.header .headerContainer_right i .hidden-search {
+    display: none;
+}
+
